@@ -1,7 +1,5 @@
 <?php
-
-$json_data = '{"username": "admin", "password": "1234"}';
-
+$json_data = file_get_contents('php://input');
 $data = json_decode($json_data);
 
 echo "Username: " . $data->username . "<br>";
